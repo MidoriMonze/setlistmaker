@@ -1,0 +1,28 @@
+.button {
+    background-color: white;
+    width: 150px;
+    height: 40px;
+    transition: all 0.3s ease 0s;
+    font-weight: 700;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    border-left: 1px solid #FFC4C4;
+    background-color: #FFC4C4;
+    font-family: 'Nunito', sans-serif;
+}
+
+.roundCorners {
+    border-radius: 6px 5px 5px 5px;
+}
+
+.button:hover {
+    background-color: #f19898;
+    transition: all 0.2s;
+}
+
+.button:active {
+    background-color: #f08282;
+    transition: all 0.1s;
+}

@@ -1,0 +1,20 @@
+.drop {
+    margin-top: 20px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, .1);
+    transition: all 0.3s;
+}
+
+.item:hover {
+    transform: scale(1.1);
+    z-index: 100;
+}
+
+.name {
+    margin-right: 50px;
+}

@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    border-radius: 6px;
+    height: 23px;
+    flex-flow: wrap;
+}
+
+.label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
