@@ -72,8 +72,6 @@ const SetList = ({ completeSongList, max, update }) => {
 
   const handleOnDragEnd = (result) => {
     const { source, destination } = result;
-    console.log('source', source);
-    console.log('destination', destination);
 
     if (!destination) return
     let add, active = setList,
