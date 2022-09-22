@@ -2,17 +2,33 @@
     margin-top: 20px;
 }
 
+.container {
+    display: flex;
+}
+
 .item {
     display: flex;
     justify-content: space-between;
     padding: 15px 40px;
     box-shadow: 0 5px 25px rgba(0, 0, 0, .1);
     transition: all 0.3s;
+    width: 480px;
 }
 
 .item:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     z-index: 100;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.button:hover {
+    cursor: pointer;
 }
 
 .name {
