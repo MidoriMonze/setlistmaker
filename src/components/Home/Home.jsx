@@ -3,6 +3,7 @@ import styles from './Home.module.css';
 import Button from '../Misc/Button';
 import Input from '../Misc/Input';
 import SetList from '../SetList/SetList';
+import Upload from '../Upload/Upload';
 
 import { minToSec } from '../../utils/utils';
 
@@ -12,6 +13,7 @@ const Home = () => {
   const [completeSongList, setCompleteSongList] = useState([]); // all songs (repertoire)
   const [maxDuration, setMaxDuration] = useState(30);
   const [isLoading, setIsLoading] = useState(true);
+  
 
   useEffect(() => {
     fetchFullSetList();
@@ -51,12 +53,17 @@ const Home = () => {
     setUpdate(!update)
   }
 
+  const handleFile = (file) => {
+    console.log(file)
+  };
+
   return (
     <>
       <label className={styles.label}>Indtast varighed i minutter</label>
       <div className={styles.header}>
         <Input type='number' onChange={(e) => onChange(e)} value={maxDuration} />
         <Button disabled={isLoading ? true : false} text='Lav sætliste' type='number' onClick={onClick} />
+        <Upload loadFile={handleFile}/>
       </div>
       <div className={styles.main}>
         {visible && <SetList completeSongList={completeSongList} max={maxDuration} update={update} />}

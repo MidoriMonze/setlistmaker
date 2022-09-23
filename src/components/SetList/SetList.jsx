@@ -6,7 +6,8 @@ import PDFFile from '../PDF/PDFFile';
 import SetListItem from './SetListItem';
 import Button from '../Misc/Button';
 import Input from '../Misc/Input';
-
+import { SaveAs } from '@mui/icons-material'
+import { IconButton, Tooltip, Link } from '@mui/material'
 import { secToMin } from '../../utils/utils';
 
 const SetList = ({ completeSongList, max, update }) => {
@@ -110,6 +111,15 @@ const SetList = ({ completeSongList, max, update }) => {
             <PDFDownloadLink document={<PDFFile setList={setList} title={title} />} fileName="Setlist.pdf">
               <Button text='Download PDF' />
             </PDFDownloadLink>
+            <Tooltip title='Gem opsætning'>
+              <IconButton style={{marginLeft: '10px'}}
+                component={Link}
+                href={`data:text/json;charset=utf-8,${encodeURIComponent(
+                  JSON.stringify(setList)
+                )}`}
+                download="setlist_configuration.json"><SaveAs color="secondary" />
+              </IconButton>
+            </Tooltip>
           </div>
         </div>
         <label>Repertoire</label>
