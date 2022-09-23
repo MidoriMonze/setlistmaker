@@ -34,3 +34,13 @@
 .name {
     margin-right: 50px;
 }
+
+.artist {
+    font-size: xx-small;
+}
+
+.duration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

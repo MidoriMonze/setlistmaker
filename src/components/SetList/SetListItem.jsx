@@ -16,7 +16,7 @@ const SetListItem = ({ setList, dropId, onItemClick }) => {
     <Droppable droppableId={dropId}>
       {(provided) => (
         <ul {...provided.droppableProps} ref={provided.innerRef} className={styles.drop}>
-          {setList.map(({ id, name, duration }, index) => {
+          {setList.map(({ id, name, artist, duration }, index) => {
             const durInMin = secToMin(duration);
             return (
               <Draggable key={id} draggableId={id} index={index}>
@@ -24,8 +24,11 @@ const SetListItem = ({ setList, dropId, onItemClick }) => {
                   <li {...provided.draggableProps} {...provided.dragHandleProps} ref={provided.innerRef}>
                     <div className={styles.container}>
                       <div className={styles.item}>
-                        <div className={styles.name}>{name} </div>
-                        <div>{durInMin}</div>
+                        <div>
+                          <div className={styles.artist}>{artist}</div>
+                          <div className={styles.name}>{name} </div>
+                        </div>
+                        <div className={styles.duration}>{durInMin}</div>
                       </div>
                       <div className={styles.button}>{btn(index)}</div>
                     </div>
